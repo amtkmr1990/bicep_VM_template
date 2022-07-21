@@ -10,8 +10,9 @@ param adminPassword string
 param location string 
 param virtualMachineName string 
 param nicName string 
-param vNetName string
-param subnetNameForVM string
+
+@description('Enter Subnet ID where VM Nic needs to be connected')
+param subnetIdForVM string
 
 var publicIPAddressName = 'vmpip'
 var networkSecurityGroupName = 'vmnsg'
@@ -66,7 +67,7 @@ resource nic 'Microsoft.Network/networkInterfaces@2020-06-01' = {
         name: 'ipconfig1'
         properties: {
           subnet: {
-            id: resourceId('Microsoft.Network/virtualNetworks/subnets', vNetName, subnetNameForVM)
+            id: subnetIdForVM
           }
           privateIPAllocationMethod: 'Dynamic'
           publicIPAddress: {

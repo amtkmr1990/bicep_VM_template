@@ -14,14 +14,11 @@
     "nicName": {
       "value": "AcmeWindowsVMNIC"
     },
-    "subnetNameForVM": {
-      "value": "default"
+    "subnetIdForVM": {
+      "value": "/subscriptions/bba2c874-6268-48fb-b2c2-4b110514f730/resourceGroups/rg-acmevnet-dev/providers/Microsoft.Network/virtualNetworks/vnet-acme-dev/subnets/subnet-vm"
     },
     "virtualMachineName": {
       "value": "AcmeWindowsVM"
-    },
-    "vNetName": {
-      "value": "vnet-acme-dev"
     },
     "location": {
       "value": "eastus"

@@ -4,9 +4,8 @@ param resourceGroupName string
 param adminPassword string 
 param adminUsername string
 param nicName string
-param subnetNameForVM string
+param subnetIdForVM string
 param virtualMachineName string
-param vNetName string
 param location string 
 
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' = {
@@ -22,9 +21,8 @@ module vm 'Module/windowsvm.bicep' = {
     adminPassword: adminPassword
     adminUsername: adminUsername
     nicName: nicName
-    subnetNameForVM: subnetNameForVM
+    subnetIdForVM: subnetIdForVM
     virtualMachineName: virtualMachineName
-    vNetName: vNetName
     location: location 
   }
 }
