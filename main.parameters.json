@@ -20,7 +20,7 @@
     "virtualMachineName": {
       "value": "AcmeWindowsVM"
     },
-    "vnetname": {
+    "vNetName": {
       "value": "vnet-acme-dev"
     },
     "location": {
