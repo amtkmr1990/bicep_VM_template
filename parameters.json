@@ -2,6 +2,9 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+    "resourceGroupName": {
+      "value": "rg-acmevm-dev"
+    },
     "adminPassword": {
       "value": "Willbedeleted@1day"
     },
@@ -11,7 +14,7 @@
     "nicName": {
       "value": "AcmeWindowsVMNIC"
     },
-    "subnetNameforVM": {
+    "subnetNameForVM": {
       "value": "default"
     },
     "virtualMachineName": {
@@ -19,6 +22,9 @@
     },
     "vnetname": {
       "value": "vnet-acme-dev"
+    },
+    "location": {
+      "value": "eastus"
     }
   }
 }

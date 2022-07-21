@@ -1,20 +1,30 @@
+targetScope = 'subscription'
+
+param resourceGroupName string
 param adminPassword string 
 param adminUsername string
 param nicName string
-param subnetNameforVM string
+param subnetNameForVM string
 param virtualMachineName string
-param vnetname string
-param location string = resourceGroup().location
+param vNetName string
+param location string 
+
+resource resourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' = {
+  name: resourceGroupName
+  location: location
+}
+
 
 module vm 'Module/windowsvm.bicep' = {
   name: 'vmdeploy'
+  scope: resourceGroup
   params: {
     adminPassword: adminPassword
     adminUsername: adminUsername
     nicName: nicName
-    subnetNameforVM: subnetNameforVM
+    subnetNameForVM: subnetNameForVM
     virtualMachineName: virtualMachineName
-    vnetname: vnetname
+    vNetName: vNetName
     location: location 
   }
 }
