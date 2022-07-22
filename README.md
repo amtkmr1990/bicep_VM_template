@@ -22,5 +22,7 @@ Refer to template Diagram for better idea.
 <h1> Refer related links </h1>
 
 https://github.com/amtkmr1990/bicep_webapp_template
+
 https://github.com/amtkmr1990/bicep_azuresqldb_template
+
 https://github.com/amtkmr1990/vnet-biceptemplate
